@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beethoven or Mozart</title>  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 style="font-size: 300%;"" >Is this Beethoven or Mozart?</h1>
+    <!--<p style="padding-bottom: 2%;font-size: x-large;">Three strikes and you're out!</p>-->
+
+    <div id="lost">
+      <div id='youlose'>You Lost! Your score was:</div>
+      <div style="font-size:10rem;color: blue;" id="finalscore"> 0 </div>
+      <button style="font-size: 2rem;"onclick="newGame()" type="button">New Game</button>
+      
+    </div>
+
+
+    <div id='game'>
+    <h2>
+      <div  class='scoreboard' style="padding-right: 3%;">
+        <div class='scoreboard'>Score:</div>
+        <div class='scoreboard' id="score"> 0 </div>
+      </div>
+      <div class='scoreboard' style="padding-left: 3%;">
+        <div class='scoreboard'>Strikes:</div>
+        <div class='scoreboard' id="strikes"></div>
+      </div>
+    </h2>
+      
+    <h2>
+
+    </h2>
+    
+    <audio style="padding-top: 2%;padding-bottom: 2%;" id='audio' src="" controls="controls">
+        
+    </audio>
+    <h3>
+      <button onclick="guess('mozart');" type="button" style="font-size: x-large; margin-right: .1%;">Mozart</button>
+      <button onclick="guess('beethoven');" type="button" style="font-size: x-large; margin-left: .1%;">Beethoven</button>
+    </h2>
+    <h2 id="correct" style="margin-top: 2%"></h2>
+    </div>
+    <script src="./main.js"></script>  
+</body>
+</html>

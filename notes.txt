@@ -1,0 +1,12 @@
+To-do:
+-style with flex/grid
+-create new game feature
+-no more alert when game over
+-high score
+-deploy
+-redesign database (keep song names, inform user of song name after guess)
+-web scraping for songs?
+-new font/overall styling
+-last feature: possible settings menu
+    -difficulty?
+    -change theme

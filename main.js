@@ -17,7 +17,7 @@ function setNewAudioFile(){
     let audioFileNumber = Math.floor(Math.random() * 11) + 1;
     //let audioFileNumber = Math.floor(Math.random() * 12);
     let audioFileName = currentComposer +audioFileNumber + ".mp3";
-    document.getElementById('audio').setAttribute('src',audioFileName);
+    document.getElementById('audio').setAttribute('src', 'audiofiles/' + audioFileName);
 
 
 }

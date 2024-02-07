@@ -3,6 +3,8 @@ window.addEventListener('load', (event) => {
 });
 
 document.getElementById("lost").style.display = "none";
+document.getElementById("next").style.display = "none";
+
 let composerArray = ["mozart","beethoven"];
 let currentComposer = "mozart";
 let score = 0;
@@ -26,13 +28,24 @@ function guess(string) {
     if(string === currentComposer) {
         document.getElementById("correct").textContent = "Correct Answer!";
         score++;
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = score;       
+        document.getElementById("game").style.display = "none";
+        document.getElementById("next").style.display = "inline";
+        document.getElementById("correct").style.display = "block";
+
+
         setNewAudioFile();
     }
     else{
         document.getElementById("correct").textContent = "Wrong Answer!";
         strikes.push('x');
-        document.getElementById("strikes").textContent = strikes;
+        document.getElementById("strikes").textContent = strikes;    
+        document.getElementById("game").style.display = "none";
+        document.getElementById("next").style.display = "inline";
+        document.getElementById("correct").style.display = "block";
+        
+
+
         setNewAudioFile();
         if(strikes.length === 3){
             lost();
@@ -42,9 +55,17 @@ function guess(string) {
     }
 }
 function lost() {
-    document.getElementById("game").style.visibility = "hidden";
+    document.getElementById("game").style.display = "none";
     document.getElementById("lost").style.display = "block";
     document.getElementById('finalscore').textContent = score;
+    document.getElementById("correct").style.display = "none";
+    document.getElementById("next").style.display = "none";
+
+}
+function next() {
+    document.getElementById("game").style.display = "block";
+    document.getElementById("next").style.display = "none";
+    document.getElementById("correct").style.display = "none";
 
 }
 function newGame() {
@@ -53,9 +74,11 @@ function newGame() {
     strikes = [];
     document.getElementById("strikes").textContent = strikes;
     document.getElementById("score").textContent = score;
-    document.getElementById("game").style.visibility = "visible";
+    document.getElementById("game").style.display = "block";
     document.getElementById("lost").style.display = "none";
     document.getElementById("correct").textContent = "";
+    document.getElementById("next").style.display = "none";
+
 
 
 }
